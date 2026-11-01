@@ -22,7 +22,7 @@ A local, manual backup tool for Windows and Linux, with the power of a real sync
 
 Most backup tools are either powerful and intimidating, or simple and opaque. Chud Copy keeps the reliability of a proven engine and adds what command lines lack: a visual map of your folders, and a clear preview of every change before it happens.
 
-It is deliberately simple about one thing: **nothing runs without you.** No cloud account, no background service, no schedule, no folder watching, no surprise when you plug in a disk.
+It is deliberately simple about one thing: **nothing runs without you.** No cloud account, no background service, no schedule, no folder watching, no surprise when you plug in a disk. Even the update check only happens when you click the button in the settings.
 
 ## Features
 
@@ -43,7 +43,7 @@ Pick sources and destinations, then draw the links between them. One source can 
 
 ### See everything before it happens
 
-Analyze any task without changing a single file. Search through what will be copied, updated, ignored or deleted, compare dates on both sides, and check free space on each destination.
+Analyze any task without changing a single file. Search through what will be copied, updated, ignored or deleted, compare dates on both sides, and check free space on each destination. Several analyses can run at once, and you can follow them all from one view.
 
 </td>
 </tr>
@@ -69,7 +69,7 @@ Speed, time left, files and the current file all come straight from the engine, 
 | **Mirror with archive** | Exact image of the source, removed files move to a dated archive on the destination | Moved, not deleted |
 | **Mirror** | Exact image of the source | Yes, permanently |
 
-Filters cover extensions, names, folders, size and date. Advanced settings stay out of the way until you need them.
+Filters cover extensions, names, folders, size and date. An optional checkbox skips files that are not worth backing up, such as Windows profile files, system caches, temporary files and unfinished downloads. Advanced settings stay out of the way until you need them.
 
 ## Built to protect your data
 
