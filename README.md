@@ -52,7 +52,7 @@ Analyze any task without changing a single file. Search through what will be cop
 
 ### Follow the real numbers
 
-Speed, time left, files and the current file all come straight from the engine, for each destination. Pause, resume or cancel at any time. A cancelled copy never leaves a half-written file behind.
+Speed, time left, files and the current file all come straight from the engine, for each destination. Pause, resume or cancel at any time. A cancelled copy never leaves a half-written file behind. While a copy runs, add other tasks to a queue: they start one after another, and the queue never survives closing the app.
 
 </td>
 <td width="50%"><img src=".github/assets/transfer.webp" alt="Transfer in progress with one progress bar per destination"></td>
@@ -78,7 +78,7 @@ Filters cover extensions, names, folders, size and date. An optional checkbox sk
 - **Risky setups are refused.** Identical or nested folders, a destination overlapping a source, or a mirror aimed at a system folder are all blocked.
 - **Suspicious deletions are flagged.** An empty source, which often means an unplugged disk, asks for a stronger confirmation.
 - **Missing disks are not a problem.** Your task keeps its paths and tells you what is unavailable.
-- **Everything is on record.** Each run keeps a report and a detailed log, and nothing in the history ever restarts by itself.
+- **Everything is on record.** Each run keeps a report and a detailed log, and nothing in the history ever restarts by itself. You can erase one report or the whole history at any time.
 
 ## Download
 
