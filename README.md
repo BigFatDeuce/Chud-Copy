@@ -34,6 +34,8 @@ It is deliberately simple about one thing: **nothing runs without you.** No clou
 
 Pick sources and destinations, then draw the links between them. One source can feed several destinations, and sources sharing a destination each get their own subfolder, so folder trees never mix by accident.
 
+Give each task its own frame colour, drag tasks into the order you like, and set a reminder for backups you tend to forget.
+
 </td>
 <td width="50%"><img src=".github/assets/editor.webp" alt="Task editor with links between sources and destinations"></td>
 </tr>
@@ -52,7 +54,7 @@ Analyze any task without changing a single file. Search through what will be cop
 
 ### Follow the real numbers
 
-Speed, time left, files and the current file all come straight from the engine, for each destination. Pause, resume or cancel at any time. A cancelled copy never leaves a half-written file behind. While a copy runs, add other tasks to a queue: they start one after another, and the queue never survives closing the app.
+Speed, time left, files and the current file all come straight from the engine, for each destination. Pause, resume or cancel at any time. A cancelled copy never leaves a half-written file behind. While a copy runs, add other tasks to a queue: they start one after another, and the queue never survives closing the app. The frame burns brighter as the copy goes faster, and a sound tells you when it is done.
 
 </td>
 <td width="50%"><img src=".github/assets/transfer.webp" alt="Transfer in progress with one progress bar per destination"></td>
@@ -74,6 +76,13 @@ Filters cover extensions, names, folders, size and date. An optional checkbox sk
 ## Tools to check your disks
 
 Each tool explains in one sentence what it does, and none of them changes your files unless you ask.
+
+<table>
+<tr>
+<td width="50%"><img src=".github/assets/tools.webp" alt="Tools screen with a card for each tool"></td>
+<td width="50%"><img src=".github/assets/integrity.webp" alt="Integrity check that found one corrupted photo"></td>
+</tr>
+</table>
 
 | Tool | What it does |
 | --- | --- |
