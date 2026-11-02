@@ -71,6 +71,22 @@ Speed, time left, files and the current file all come straight from the engine, 
 
 Filters cover extensions, names, folders, size and date. An optional checkbox skips files that are not worth backing up, such as Windows profile files, system caches, temporary files and unfinished downloads. Advanced settings stay out of the way until you need them.
 
+## Tools to check your disks
+
+Each tool explains in one sentence what it does, and none of them changes your files unless you ask.
+
+| Tool | What it does |
+| --- | --- |
+| **Integrity** | Reads every file and compares its MD5 fingerprint with the previous check, to spot silent corruption. Exports `.md5` files compatible with MD5summer. |
+| **Disk health** | Reads SMART data: wear, bad sectors, cable errors, NVMe logs. Each reading is compared with the previous one, so rising counters stand out from old ones. |
+| **Compare two folders** | Shows what differs between a backup and its source, without copying anything. |
+| **Duplicates** | Finds identical files by content. Extra copies can go to the recycle bin after confirmation; the copy you keep is never touched. |
+| **Disk space** | A clickable map of the folders that take up the most space. |
+| **Read test** | Reads every file to find unreadable ones and areas of the disk that are abnormally slow. |
+| **Restore** | Brings back an archived version of a file into the folder of your choice, without replacing anything. |
+
+Integrity and disk health reports can be copied as a ready-made prompt for the AI of your choice. Tasks can also remind you when a backup has not been run for a while, without ever running it on their own.
+
 ## Built to protect your data
 
 - **Your sources are never modified.** Every operation only writes to the destination.
