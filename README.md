@@ -113,11 +113,18 @@ Get the files from the [latest release](https://github.com/BigFatDeuce/Chud-Copy
 | --- | --- | --- |
 | Windows | `Chud-Copy_x.y.z_x64-setup.exe` | Installer |
 | Windows | `Chud-Copy_x.y.z_x64-portable.zip` | No installation, keep `rclone.exe` next to the app |
-| Linux | `Chud-Copy_x.y.z_amd64.AppImage` | Nothing else to install |
+| Fedora, Nobara and other RPM distributions | `Chud-Copy-x.y.z-1.x86_64.rpm` | **Recommended on these systems**: uses your system's up-to-date, GPU-accelerated web engine |
+| Other Linux | `Chud-Copy_x.y.z_amd64.AppImage` | Nothing else to install |
 
 **Windows:** the app is not code-signed yet, so SmartScreen may show a warning. Choose *More info*, then *Run anyway*.
 
-**Linux:** make the file executable, then run it. If it complains about FUSE, install `fuse-libs` or add `--appimage-extract-and-run`.
+**Fedora, Nobara:** install the RPM, then launch Chud Copy from your applications menu.
+
+```bash
+sudo dnf install ./Chud-Copy-*.x86_64.rpm
+```
+
+**Other Linux:** make the AppImage executable, then run it. If it complains about FUSE, install `fuse-libs` or add `--appimage-extract-and-run`. The AppImage ships its own web engine, which can be slower than your system's.
 
 ```bash
 chmod +x Chud-Copy_*_amd64.AppImage
