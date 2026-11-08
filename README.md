@@ -89,7 +89,7 @@ Each tool explains in one sentence what it does, and none of them changes your f
 | **Integrity** | Reads every file and compares its MD5 fingerprint with the previous check, to spot silent corruption. Exports `.md5` files compatible with MD5summer. |
 | **Disk health** | Reads SMART data: wear, bad sectors, cable errors, NVMe logs. Each reading is compared with the previous one, so rising counters stand out from old ones. |
 | **Compare two folders** | Shows what differs between a backup and its source, without copying anything. |
-| **Duplicates** | Finds identical files by content. Extra copies can go to the recycle bin after confirmation; the copy you keep is never touched. |
+| **Duplicates** | Finds identical files by content. Extra copies can go to the recycle bin after confirmation; the copy you keep is never touched. On network shares, NAS devices and USB sticks, which have no recycle bin, they move instantly to a recoverable `_Corbeille Chud Copy` folder on the same drive. |
 | **Disk space** | A clickable map of the folders that take up the most space. |
 | **Read test** | Reads every file to find unreadable ones and areas of the disk that are abnormally slow. |
 | **Restore** | Brings back an archived version of a file into the folder of your choice, without replacing anything. |
