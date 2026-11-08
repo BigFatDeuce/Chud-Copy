@@ -93,6 +93,9 @@ Each tool explains in one sentence what it does, and none of them changes your f
 | **Disk space** | A clickable map of the folders that take up the most space. |
 | **Read test** | Reads every file to find unreadable ones and areas of the disk that are abnormally slow. |
 | **Restore** | Brings back an archived version of a file into the folder of your choice, without replacing anything. |
+| **Storage Cleanup Advisor** | Finds obsolete installers (including older versions of the same installer), abandoned temporary files, unfinished or old downloads, and the heaviest folders. Nothing is ever deleted automatically: you review the list, tick what goes, and it moves to the recycle bin. |
+| **Network & NAS Tester** | Checks that an SMB or NFS share is reachable, measures server latency, share response time, read and write speeds and small-file performance, verifies the data read back, and explains the results in plain words. Ideal before backing up to a NAS. |
+| **Drive Identity Guard** | Remembers each backup drive by its serial number or UUID. If another drive shows up under the same letter or mount point, analyses and copies are blocked until you plug in the right drive or confirm the change. |
 
 Integrity and disk health reports can be copied as a ready-made prompt for the AI of your choice. Tasks can also remind you when a backup has not been run for a while, without ever running it on their own.
 
@@ -101,6 +104,7 @@ Integrity and disk health reports can be copied as a ready-made prompt for the A
 - **Your sources are never modified.** Every operation only writes to the destination.
 - **A mirror must be analyzed first.** Right before writing, the app compares the real state with the list you approved, and stops without changing anything if a file not on that list would be removed.
 - **Risky setups are refused.** Identical or nested folders, a destination overlapping a source, or a mirror aimed at a system folder are all blocked.
+- **The right drive, every time.** Each source and destination remembers its drive. A different disk under the same letter (E:, F:) or mount point, or a backup folder that falls back onto the system disk because the drive is unplugged, blocks the operation instead of mirroring onto the wrong disk.
 - **Suspicious deletions are flagged.** An empty source, which often means an unplugged disk, asks for a stronger confirmation.
 - **Missing disks are not a problem.** Your task keeps its paths and tells you what is unavailable.
 - **Everything is on record.** Each run keeps a report and a detailed log, and nothing in the history ever restarts by itself. You can erase one report or the whole history at any time.
