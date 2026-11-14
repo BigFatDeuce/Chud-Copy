@@ -54,7 +54,7 @@ Analyze any task without changing a single file. Search through what will be cop
 
 ### Follow the real numbers
 
-Speed, time left, files and the current file all come straight from the engine, for each destination. Pause, resume or cancel at any time. A cancelled copy never leaves a half-written file behind. While a copy runs, add other tasks to a queue: they start one after another, and the queue never survives closing the app. The frame burns brighter as the copy goes faster, and a sound tells you when it is done.
+Speed, time left, files and the current file all come straight from the engine, for each destination. Pause, resume or cancel at any time. A cancelled copy never leaves a half-written file behind. While a copy runs, add other tasks to a queue: they start one after another, and the queue never survives closing the app. Tick one box to shut the PC down once everything is done, with a one-minute countdown you can cancel. The frame burns brighter as the copy goes faster, and a sound tells you when it is done.
 
 </td>
 <td width="50%"><img src=".github/assets/transfer.webp" alt="Transfer in progress with one progress bar per destination"></td>
@@ -90,7 +90,7 @@ Each tool explains in one sentence what it does, and none of them changes your f
 | **Disk health** | Reads SMART data: wear, bad sectors, cable errors, NVMe logs. Each reading is compared with the previous one, so rising counters stand out from old ones. |
 | **Compare two folders** | Shows what differs between a backup and its source, without copying anything. |
 | **Duplicates** | Finds identical files by content. Extra copies can go to the recycle bin after confirmation; the copy you keep is never touched. On network shares, NAS devices and USB sticks, which have no recycle bin, they move instantly to a recoverable `_Corbeille Chud Copy` folder on the same drive. |
-| **Disk space** | A clickable map of the folders that take up the most space. |
+| **Disk space** | A clickable map of the folders that take up the most space. Open any of them in your file explorer. |
 | **Read test** | Reads every file to find unreadable ones and areas of the disk that are abnormally slow. |
 | **Restore** | Brings back an archived version of a file into the folder of your choice, without replacing anything. |
 | **Storage Cleanup Advisor** | Finds obsolete installers (including older versions of the same installer), abandoned temporary files, unfinished or old downloads, and the heaviest folders. Nothing is ever deleted automatically: you review the list, tick what goes, and it moves to the recycle bin. |
