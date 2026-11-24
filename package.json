@@ -1,0 +1,35 @@
+{
+  "name": "chud-copy",
+  "private": true,
+  "version": "1.8.3",
+  "license": "GPL-3.0-or-later",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && node tests/i18n-check.mjs && vite build",
+    "tauri": "tauri",
+    "fetch:rclone": "node scripts/fetch-rclone.mjs",
+    "icons": "tauri icon src-tauri/icons/source.png",
+    "app:dev": "npm run fetch:rclone && tauri dev",
+    "app:build": "npm run fetch:rclone && tauri build"
+  },
+  "dependencies": {
+    "@fontsource-variable/jetbrains-mono": "5.3.0",
+    "@fontsource-variable/sora": "5.3.0",
+    "@tauri-apps/api": "2.12.4",
+    "@tauri-apps/plugin-dialog": "2.8.4",
+    "@tauri-apps/plugin-opener": "2.7.2",
+    "lucide-react": "1.66.0",
+    "react": "19.3.1",
+    "react-dom": "19.3.1"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "2.12.4",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "@vitejs/plugin-react": "6.1.2",
+    "playwright-core": "1.64.1",
+    "typescript": "7.0.2",
+    "vite": "8.3.5"
+  }
+}

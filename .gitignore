@@ -1,0 +1,16 @@
+node_modules/
+dist/
+target/
+src-tauri/target/
+src-tauri/gen/
+src-tauri/binaries/
+release/
+*.log
+
+# Local assistant notes and private words, never published
+.claude/
+CLAUDE.md
+CLAUDE.local.md
+AGENTS.md
+NOUVEAU-PC.md
+publication/.private-words

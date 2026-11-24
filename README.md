@@ -160,4 +160,17 @@ English, 简体中文, हिन्दी, Español, العربية, Français, 
 
 Chud Copy is built with [Tauri](https://tauri.app) and React, and copies files with [rclone](https://rclone.org) (MIT). The animated background is based on [WebGL Fluid Simulation](https://github.com/PavelDoGreat/WebGL-Fluid-Simulation) by Pavel Dobryakov (MIT). Fonts are Sora and JetBrains Mono (OFL). License texts ship in the app's `licenses` folder.
 
-This repository hosts release builds only.
+## Building from source
+
+You need Node.js 22, Rust (stable) and the [Tauri 2 prerequisites](https://v2.tauri.app/start/prerequisites/) for your system.
+
+```bash
+npm ci
+npm run app:build
+```
+
+`npm run app:build` downloads the pinned rclone engine, then builds the installers. `npm run app:dev` starts the app in development mode. The Docker files in `docker/` build and check the Linux packages.
+
+## License
+
+© 2026 BigFatDeuce. The code is free software under the [GPL-3.0-or-later](LICENSE): you can use, study, share and modify it, and versions you distribute must stay under the same licence. Third-party components keep their own licences (see `licenses/`).

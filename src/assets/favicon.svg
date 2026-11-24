@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="Astronaute"><title>Astronaute</title><path fill="none" stroke="#011128" stroke-width="24" stroke-linecap="round" d="M172 44C214 16 246 56 234 84Q230 96 216 104M214 150C248 158 244 214 200 212M66 204C14 196 16 150 44 142"/><path fill="none" stroke="#123f7d" stroke-width="12" stroke-linecap="round" d="M172 44C214 16 246 56 234 84Q230 96 216 104M214 150C248 158 244 214 200 212M66 204C14 196 16 150 44 142"/>
+<path fill="#011128" d="M20 208Q60 180 128 182Q196 180 234 208Q214 244 128 245Q42 244 20 208Z"/>
+<rect x="23" y="92" width="34" height="50" rx="14" fill="#011128"/><rect x="198" y="92" width="34" height="50" rx="14" fill="#011128"/>
+<rect x="30" y="99" width="18" height="36" rx="8" fill="#f9c83a"/><rect x="207" y="99" width="18" height="36" rx="8" fill="#f9c83a"/>
+<ellipse cx="127" cy="104" rx="90" ry="92" fill="#011128"/>
+<path fill="#123f7d" d="M48 84Q62 26 127 20Q192 26 206 84Q170 54 127 54Q84 54 48 84Z"/>
+<path fill="#f9c83a" d="M90 46Q88 24 124 21Q160 22 158 46Q124 40 90 46Z"/>
+<path fill="none" stroke="#011128" stroke-width="7" d="M56 80Q84 46 127 46Q172 46 200 80"/>
+<ellipse cx="127" cy="118" rx="78" ry="74" fill="#011128" stroke="#f9c83a" stroke-width="6"/>
+<path fill="#123f7d" d="M58 118Q58 62 127 57Q196 62 196 118Q170 74 127 72Q84 74 58 118Z"/>
+<path fill="#c8b59c" d="M78 96Q127 56 176 96L170 138Q160 176 127 184Q94 176 84 138Z"/>
+<path fill="#f9c83a" d="M78 72L110 60L100 80Z"/>
+<path fill="#011128" d="M68 80L118 91L114 101L66 91ZM186 80L136 91L140 101L188 91Z"/>
+<rect x="72" y="99" width="39" height="22" rx="3" fill="#ffffff" stroke="#011128" stroke-width="5"/>
+<rect x="143" y="99" width="39" height="22" rx="3" fill="#ffffff" stroke="#011128" stroke-width="5"/>
+<circle cx="94" cy="110" r="6.5" fill="#011128"/><circle cx="160" cy="110" r="6.5" fill="#011128"/>
+<path fill="#011128" d="M72 99H111V110L72 102ZM182 99H143V110L182 102Z"/>
+<path fill="none" stroke="#011128" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" d="M111 106H143M118 116L115 136Q117 146 127 146Q137 146 139 136L136 116"/>
+<path fill="none" stroke="#011128" stroke-width="7" stroke-linecap="round" d="M102 170Q127 156 152 170"/>
+<path fill="#f9c83a" stroke="#011128" stroke-width="5" stroke-linejoin="round" d="M177 26L191 56L160 52Z"/>
+<path fill="none" stroke="#f9c83a" stroke-width="5" stroke-linecap="round" d="M54 182Q90 212 118 212M182 212Q210 206 218 196"/>
+<path fill="#f9c83a" stroke="#011128" stroke-width="5" stroke-linejoin="round" d="M113 212L140 192V203H164V222H140V232Z"/>
+<rect x="169" y="201" width="9" height="23" rx="2.5" fill="#f9c83a" stroke="#011128" stroke-width="3"/></svg>

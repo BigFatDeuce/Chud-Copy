@@ -1,0 +1,8 @@
+Composants tiers distribués avec Chud Copy
+
+rclone 1.75.2 : moteur de copie embarqué, licence MIT, Nick Craig-Wood et contributeurs.
+WebGL Fluid Simulation : méthode de simulation reprise pour le fond animé, licence MIT, Pavel Dobryakov.
+Tauri : socle de l'application, licence MIT ou Apache 2.0.
+React : licence MIT.
+Lucide : icônes, licence ISC.
+Sora et JetBrains Mono : polices, licence SIL Open Font 1.1.

@@ -1,0 +1,35 @@
+[package]
+name = "chud-core"
+version = "1.8.3"
+edition = "2021"
+license = "GPL-3.0-or-later"
+description = "Coeur de Chud Copy : modèle, sécurité, persistance et moteur, sans dépendance à l'interface"
+
+[dependencies]
+base64 = "0.22"
+chrono = { version = "0.4", default-features = false, features = ["clock"] }
+md-5 = "0.10"
+trash = "5"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+sysinfo = "0.40"
+thiserror = "2"
+uuid = { version = "1", features = ["v4"] }
+walkdir = "2"
+
+[target.'cfg(unix)'.dependencies]
+libc = "0.2"
+
+[target.'cfg(windows)'.dependencies]
+windows = { version = "0.62", features = ["Win32_Foundation", "Win32_System_Com", "Win32_UI_Shell"] }
+windows-sys = { version = "0.61", features = [
+  "Win32_Foundation",
+  "Win32_NetworkManagement_WNet",
+  "Win32_Security",
+  "Win32_Storage_FileSystem",
+  "Win32_System_JobObjects",
+  "Win32_System_Threading",
+] }
+
+[dev-dependencies]
+tempfile = "3"

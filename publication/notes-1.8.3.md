@@ -1,0 +1,4 @@
+- **Shut down the PC when copies finish.** A new checkbox in *My tasks*, also shown on the copy screen, turns the computer off once the copy and the whole queue are done. A one-minute countdown lets you cancel, a cancelled copy never shuts anything down, and the box is never remembered between launches. Apps with unsaved work can still hold the shutdown back.
+- **A readable disk space map.** Boxes are now laid out on the map's real size instead of being stretched into thin strips, and items too small to read are grouped into one *others* box. Every item is listed below the map.
+- **Open folders from the disk space map** in your file explorer: a button for the folder shown, a right-click on any box, or the folder icon on each line of the list.
+- **Copy screen fixed for tasks with many folders:** the top panel no longer gets squeezed, so its title and figures stay inside their frame. The same fix applies to every screen with a long list.

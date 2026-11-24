@@ -1,0 +1,39 @@
+[workspace]
+members = [".", "core"]
+resolver = "2"
+
+[package]
+name = "chud-copy"
+version = "1.8.3"
+description = "Chud Copy, copie et synchronisation manuelles de dossiers"
+authors = ["Chud Copy"]
+license = "GPL-3.0-or-later"
+edition = "2021"
+rust-version = "1.77"
+
+[lib]
+name = "chud_copy_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+chud-core = { path = "core" }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+tauri = { version = "2", features = [] }
+tauri-plugin-dialog = "2"
+tauri-plugin-opener = "2"
+tauri-plugin-single-instance = "2"
+
+# La même version que celle de Tauri : seul le réglage des boutons de la barre de titre s'en sert.
+[target.'cfg(target_os = "linux")'.dependencies]
+gtk = "0.18"
+
+[profile.release]
+codegen-units = 1
+lto = true
+opt-level = "s"
+panic = "abort"
+strip = true
