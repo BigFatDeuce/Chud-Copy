@@ -32,9 +32,15 @@ for (const [name, path] of Object.entries(LOCAL)) {
   copyFileSync(source, join(out, name));
 }
 
+// Chud Copy itself is GPL-3.0-or-later: its object code must ship with the licence text.
+copyFileSync(join(root, "LICENSE"), join(out, "Chud-Copy-LICENSE.txt"));
+
 writeFileSync(
   join(out, "LISEZ-MOI.txt"),
-  `Composants tiers distribués avec Chud Copy
+  `Chud Copy : logiciel libre sous licence GPL-3.0-or-later (Chud-Copy-LICENSE.txt).
+Code source : https://github.com/BigFatDeuce/Chud-Copy
+
+Composants tiers distribués avec Chud Copy
 
 rclone 1.75.2 : moteur de copie embarqué, licence MIT, Nick Craig-Wood et contributeurs.
 WebGL Fluid Simulation : méthode de simulation reprise pour le fond animé, licence MIT, Pavel Dobryakov.

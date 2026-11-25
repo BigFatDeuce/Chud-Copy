@@ -1,3 +1,6 @@
+Chud Copy : logiciel libre sous licence GPL-3.0-or-later (Chud-Copy-LICENSE.txt).
+Code source : https://github.com/BigFatDeuce/Chud-Copy
+
 Composants tiers distribués avec Chud Copy
 
 rclone 1.75.2 : moteur de copie embarqué, licence MIT, Nick Craig-Wood et contributeurs.

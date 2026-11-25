@@ -1,0 +1,6 @@
+- **Integrity check: no more false alarms.** A file edited while a check was running could be reported as corrupted; it is now reported as modified, and a file that keeps changing while it is read is flagged as unreadable instead of getting a wrong fingerprint.
+- **Unreadable folders no longer look like lost files.** When a folder cannot be opened during a check, the files inside it are no longer reported as missing, and they keep their last known fingerprint in the reference.
+- **A first check that could not read everything waits for you.** It only becomes the reference once you accept it, so a partial scan never silently replaces a complete picture.
+- **Linux: folders that differ only by letter case keep separate references.** `Music` and `music` are two folders on Linux and are now checked independently. References made with earlier versions are kept.
+- **Mirror safety guarded by a new test:** a file that appears in the destination while a mirror is running is never deleted.
+- **Dependency updates** for two security advisories in third-party libraries.

@@ -400,6 +400,75 @@ fn a_file_replaced_by_another_with_same_count_is_still_caught() {
     assert!(lab.path("dst/autre.txt").exists());
 }
 
+/// An engine that changes the destination once the real transfer has started copying,
+/// as another program writing to a shared folder would during a long mirror.
+struct Meddler {
+    inner: Arc<dyn Engine>,
+    meddle: Box<dyn Fn() + Send + Sync>,
+    done: Mutex<bool>,
+}
+
+impl Engine for Meddler {
+    fn name(&self) -> String {
+        self.inner.name()
+    }
+
+    fn version(&self) -> chud_core::Result<String> {
+        self.inner.version()
+    }
+
+    fn analyze(&self, job: &JobSpec, control: &Control, progress: &mut dyn FnMut(&EngineStats)) -> chud_core::Result<Analysis> {
+        self.inner.analyze(job, control, progress)
+    }
+
+    fn transfer(&self, job: &JobSpec, control: &Control, events: &mut dyn FnMut(EngineEvent)) -> chud_core::Result<TransferOutcome> {
+        self.inner.transfer(job, control, &mut |event| {
+            if let EngineEvent::Log { text, .. } = &event {
+                let mut done = self.done.lock().unwrap();
+                if !*done && text.contains("Copied") {
+                    *done = true;
+                    (self.meddle)();
+                }
+            }
+            events(event);
+        })
+    }
+
+    fn verify(&self, job: &JobSpec, files: &[String], control: &Control, progress: &mut dyn FnMut(&EngineStats)) -> chud_core::Result<VerifyOutcome> {
+        self.inner.verify(job, files, control, progress)
+    }
+}
+
+#[test]
+fn a_file_arriving_in_the_destination_during_a_mirror_is_never_deleted() {
+    let lab = Lab::new();
+    fixture(&lab);
+    let task = lab.task(Mode::Mirror, &[("src", "dst", "")]);
+    let plan = lab.analyze(&task);
+    assert_eq!(plan.totals.delete, 2);
+
+    // While files are being copied, a validated deletion disappears and an unknown file arrives:
+    // the count of deletions stays within the validated limit, only identity tells them apart.
+    let gone = lab.path("dst/gone.txt");
+    let arrived = lab.path("dst/arrive-pendant-copie.txt");
+    let meddle_arrived = arrived.clone();
+    let meddler = Arc::new(Meddler {
+        inner: lab.engine.clone(),
+        meddle: Box::new(move || {
+            let _ = fs::remove_file(&gone);
+            fs::write(&meddle_arrived, "never validated").unwrap();
+        }),
+        done: Mutex::new(false),
+    });
+    let engine: Arc<dyn Engine> = meddler.clone();
+    let handle = runner::start(engine, lab.store.clone(), task, Some(plan), Arc::new(|_: &RunRecord| {})).unwrap();
+    wait(&handle);
+    let record = history::get(&lab.store, &handle.run_id).unwrap();
+    assert!(*meddler.done.lock().unwrap(), "the destination must change while files are being copied");
+    assert!(arrived.exists(), "a file never validated was deleted ({:?}, {:?})", record.status, record.errors);
+    assert!(!lab.path("dst/extra/orphan.txt").exists(), "the validated deletion still happens");
+}
+
 #[test]
 fn fewer_deletions_than_validated_is_fine() {
     let lab = Lab::new();

@@ -95,11 +95,12 @@ try {
 
   await step("les tâches se réordonnent au glisser, puis au clavier", async () => {
     const before = await cardNames(page);
-    const handle = await page.locator(".task-card").nth(0).locator(".drag-handle").boundingBox();
-    const target = await page.locator(".task-card").nth(2).boundingBox();
-    await page.mouse.move(handle.x + handle.width / 2, handle.y + handle.height / 2);
+    // Cards may still be animating in: measure them once they stop moving.
+    const handle = await settledCenter(page, page.locator(".task-card").nth(0).locator(".drag-handle"));
+    const target = await settledCenter(page, page.locator(".task-card").nth(2));
+    await page.mouse.move(handle.x, handle.y);
     await page.mouse.down();
-    await page.mouse.move(target.x + target.width / 2, target.y + target.height / 2, { steps: 14 });
+    await page.mouse.move(target.x, target.y, { steps: 14 });
     await page.waitForTimeout(450);
     await shot("02-glisser");
     await page.mouse.up();

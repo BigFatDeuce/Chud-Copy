@@ -15,7 +15,7 @@ const uninstallKey = "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Uninst
 execFileSync(setup, ["/S", `/D=${target}`], { stdio: "ignore" });
 await new Promise((r) => setTimeout(r, 2500));
 
-for (const file of ["Chud Copy.exe", "rclone.exe", "licenses/rclone-COPYING.txt", "licenses/WebGL-Fluid-Simulation-LICENSE.txt", "licenses/Tauri-LICENSE-MIT.txt"]) {
+for (const file of ["Chud Copy.exe", "rclone.exe", "licenses/Chud-Copy-LICENSE.txt", "licenses/rclone-COPYING.txt", "licenses/WebGL-Fluid-Simulation-LICENSE.txt", "licenses/Tauri-LICENSE-MIT.txt"]) {
   assert.ok(existsSync(join(target, file)), `absent de l'installation : ${file}`);
 }
 console.log("ok - fichiers installés, moteur et licences compris");

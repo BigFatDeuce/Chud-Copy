@@ -1,6 +1,6 @@
 [package]
 name = "chud-core"
-version = "1.8.3"
+version = "1.8.4"
 edition = "2021"
 license = "GPL-3.0-or-later"
 description = "Coeur de Chud Copy : modèle, sécurité, persistance et moteur, sans dépendance à l'interface"
@@ -9,7 +9,6 @@ description = "Coeur de Chud Copy : modèle, sécurité, persistance et moteur, 
 base64 = "0.22"
 chrono = { version = "0.4", default-features = false, features = ["clock"] }
 md-5 = "0.10"
-trash = "5"
 serde = { version = "1", features = ["derive"] }
 serde_json = "1"
 sysinfo = "0.40"
@@ -19,6 +18,10 @@ walkdir = "2"
 
 [target.'cfg(unix)'.dependencies]
 libc = "0.2"
+
+# Only used where the system recycle bin is not reached through the Windows shell.
+[target.'cfg(not(windows))'.dependencies]
+trash = "5"
 
 [target.'cfg(windows)'.dependencies]
 windows = { version = "0.62", features = ["Win32_Foundation", "Win32_System_Com", "Win32_UI_Shell"] }

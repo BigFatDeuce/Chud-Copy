@@ -4,7 +4,7 @@ resolver = "2"
 
 [package]
 name = "chud-copy"
-version = "1.8.3"
+version = "1.8.4"
 description = "Chud Copy, copie et synchronisation manuelles de dossiers"
 authors = ["Chud Copy"]
 license = "GPL-3.0-or-later"
